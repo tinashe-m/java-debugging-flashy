@@ -1,0 +1,29 @@
+From: Smithers, John john.smithers@volatilecorp.com
+Sent: Tuesday, 18 February 2025 11:45 AM
+To: Tao, Terrence terrence.tao@volatilecorp.com 
+Subject:RE: Data From Today’s Report Is Not Available In Athena
+Thanks for your prompt response! I see the data in Athena now.
+
+Regards,
+John Smithers
+Volatile Business Support
+
+From: Tao, Terrence terrence.tao@volatilecorp.com
+Sent: Tuesday, 18 February 2025 11:40 AM
+To: Smithers, John john.smithers@volatilecorp.com;
+Subject:RE: Data From Today’s Report Is Not Available In Athena
+Hi John,
+Thank you for letting us know. I have looked at our application logs and this is a bit of a strange one! There was an intermittent issue with Glue, so our application was not able to register data from today’s report for access via Athena. I have now reuploaded today’s trade file for re-processing and I see that the glue registration was successful and the data is now available in Athena.
+Regards,
+Terence Tao
+Volatile Service Developer
+
+From: Smithers, John john.smithers@volatilecorp.com
+Sent: Tuesday, 18 February 2025 11:18 AM
+To: volatile_service_support@volatilecorp.com
+Subject: Data From Today’s Report Is Not Available In Athena
+Hi Team,
+I am analysing our reports for quality assurance, and I can not find data from today’s report in Athena despite the report file being available in the file share. Could you please advise?
+Regards,
+John Smithers
+Volatile Business Support
