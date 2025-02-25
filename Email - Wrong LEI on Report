@@ -1,0 +1,49 @@
+From: Smithers, John john.smithers@volatilecorp.com
+Sent: Tuesday, 25 February 2025 8:50 AM
+To: Tao, Terrence terrence.tao@volatilecorp.com; Tawanda, Mango tawanda.mango@volatilecorp.com
+Subject:RE: Wrong LEI on Report
+Thanks everyone! I see the new report with the correct LEI.
+
+Regards,
+John Smithers
+Volatile Business Support
+
+From: Tao, Terrence terrence.tao@volatilecorp.com
+Sent: Tuesday, 25 February 2025 8:45 AM
+To: Smithers, John john.smithers@volatilecorp.com; Tawanda, Mango tawanda.mango@volatilecorp.com
+Subject:RE: Wrong LEI on Report
+Thanks Tawanda, I have updated the mapping and reuploaded the trade file for processing.
+
+Regards,
+Terence Tao
+Volatile Service Developer
+
+From: Tawanda, Mango tawanda.mango@volatilecorp.com
+Sent: Tuesday, 25 February 2025 8:25 AM
+To: Smithers, John john.smithers@volatilecorp.com; Tao, Terrence terrence.tao@volatilecorp.com
+Subject:RE: Wrong LEI on Report
+Hi Terrence,
+Counterparty ‘BR1’ maps to the ‘GHE12785’ LEI.
+Regards,
+Tawanda Mango
+Data Team Associate
+
+From: Tao, Terrence terrence.tao@volatilecorp.com
+Sent: Tuesday, 25 February 2025 8:20 AM
+To: Smithers, John john.smithers@volatilecorp.com; data_team@volatilecorp.com
+Subject:RE: Wrong LEI on Report
+Hi John,
+Thank you for letting us know. Data Team, could you please provide the LEI mapping for the ‘BR1’ counterparty?
+Regards,
+Terence Tao
+Volatile Service Developer
+
+From: Smithers, John john.smithers@volatilecorp.com
+Sent: Tuesday, 25 February 2025 8:08 AM
+To: volatile_service_support@volatilecorp.com
+Subject: Wrong LEI on Report
+Hi Team,
+The LEI is populated with ‘Unknown’ for trades for the ‘BR1’ counterparty. Could you please look into this? Thanks!
+Regards,
+John Smithers
+Volatile Business Support
