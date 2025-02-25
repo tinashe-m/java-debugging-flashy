@@ -1,0 +1,43 @@
+Volatile Service Runbook
+
+Summary
+The volatile-etl-service is an AWS Lambda solution. It takes a trade text file as an input, extracts the data, performs simple
+transformations on the data, and produces our output file. The transformation involves filtering the trades by product type, 
+mapping from Vanguard schema to the regulator’s schema and enriching the trades with a counterparty LEI from a static file.
+It runs on a cron schedule of every 5 minutes. The processing is deterministic.
+
+Inputs
+src/resources/input/CounterPartyStatic.txt
+src/resources/input/trades.txt
+
+Outputs
+src/resources/output/report.csv
+
+Application Triggers
+Cron schedule, every 5 minutes. * /5 * * * *
+
+Troubleshooting
+Missing Trade File
+Common issues include:
+- AWS outage, check if there is an incident email from AWS_incidents@volatilecorp.com
+- Upstream availability issue, check if there is an incident email from trades_oms@volatilecorp.com 
+
+Missing Report File
+Business users expect the report file by 10am and if they do not receive by then, they reach out to the development team via email. The development team need 
+to investigate the cause of the missing report file. Common issues include:
+- AWS outage, check if there is an incident email from AWS_incidents@volatilecorp.com
+- Trades file is missing headers. To resolve manually add the headers
+
+Wrong Counterparty LEI
+Counterparty LEI is obtained from the CounterPartyStatic.txt static file and used to enrich trade information using OMS counterparty code from the trades.txt file in the transformation 
+to the report csv file. Sometimes new LEIs are created and the CounterPartyStatic.txt static file becomes stale, resulting in a default LEI being populated. The 
+application creates informational logs when this occurs, and the development team is alerted of the logs. Business users of the application may also reach out via 
+email to let us know that LEI enrichment was incorrect. To resolve this issue reach out to the business via email at data_team@volatilecorp.com to obtain the 
+missing LEI mapping and update the CounterPartyStatic.txt file.
+
+Elevation Process
+1. The application is deployed to the us-east-1 primary region and the eu-west-2 secondary region.
+2. Avoid elevation between 9am -2pm when availability is critical for the business
+
+Developer Requirements
+The application uses Python 3.9 deployed on AWS Lambda
