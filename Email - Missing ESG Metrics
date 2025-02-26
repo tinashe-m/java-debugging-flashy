@@ -1,0 +1,50 @@
+From: Wazowski, John john.Wazowski@volatilecorp.com
+Sent: Wednesday, 25 February 2025 8:50 AM
+To: Smith, Georgina Georgina.Smith@volatilecorp.com; Ricky, Jones Ricky.Jones@volatilecorp.com
+Subject:RE: Missing ESG Metrics in Report
+Thanks everyone! I see the new report with esg metrics for security 'SCA1876'!
+
+Regards,
+John Wazowski
+ESG Xperience Business Support
+
+From: Smith, Georgina Georgina.Smith@volatilecorp.com
+Sent: Wednesday, 26 February 2025 9:45 AM
+To: Wazowski, John john.Wazowski@volatilecorp.com; Ricky, Jones Ricky.Jones@volatilecorp.com
+Subject:RE: Missing ESG Metrics in report
+Thanks Ricky.
+I have retriggered the lambda function to process the latest esg file again. 
+Regards,
+Georgina Smith
+ESG Xperience Service Developer
+
+From: Ricky, Jones Ricky.Jones@volatilecorp.com
+Sent: Wednesday, 26 February 2025 9:25 AM
+To: Wazowski, John john.Wazowski@volatilecorp.com; Smith, Georgina Georgina.Smith@volatilecorp.com
+Subject:RE: Missing ESG Metrics in Report
+Hi Georgina,
+Thanks for letting us know, the file was not processed correctly due to missing security_id 'SCA1876'. I have reuploaded the file for processing.
+Regards,
+Ricky Jones
+ESG Team Associate
+
+From: Smith, Georgina Georgina.Smith@volatilecorp.com
+Sent: Wednesday, 26 February 2025 9:20 AM
+To: Wazowski, John john.Wazowski@volatilecorp.com; esg@volatilecorp.com
+Subject:RE: Missing ESG Metrics in Report
+Hi John,
+Thank you for letting us know.
+ESG Team, we have checked the latest esg file and it is missing security_id 'SCA1876', are you able to fix this?
+Regards,
+Georgina Smith
+ESG Xperience Service Developer
+
+From: Wazowski, John john.Wazowski@volatilecorp.com
+Sent: Wednesday, 26 February 2025 9:08 AM
+To: esg_xperience_service@volatilecorp.com
+Subject: Missing ESG Metrics in Report
+Hi there,
+The latest index esg report is missing ESG metrics for all securities with id 'SCA1876'. Do we know why this is the case? Thanks!
+Regards,
+John Wazowski
+ESG Xperience Business Support
