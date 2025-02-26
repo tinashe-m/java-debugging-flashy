@@ -1,0 +1,40 @@
+ESG - Xperience Service Runbook
+
+Summary
+The esg-xperience-etl-service is an AWS Lambda event based solution. It performs esg calculations for indexes on a daily basis. A daily index file landing in an s3 bucket triggers the lambda,
+it then joins on the esg metrics, performs additional calculations, writes back to s3 then updates glue tables.
+
+Inputs
+s3://esg-data/input/esg_metrics.txt
+s3://index-data/input/index_daily.txt
+
+Outputs
+s3://operations-reports/output/report.csv
+
+Application Triggers
+File landing daily in s3 bucket.
+
+Troubleshooting
+Missing Input Files
+Common issues include:
+- AWS outage, check if there is an incident email from AWS_incidents@volatilecorp.com
+- Issue with data supplier, check if there is an incident email from index_providers@volatilecorp.com or esg@volatilecorp.com
+
+Missing Report File
+Operations team expects report by 11am everyday. If file is not available through Athena for that date, they reach out to the dev team via email. Dev team then performs analysis
+on root cause. Typical issues include:
+- AWS outage, check if there is an incident email from AWS_incidents@volatilecorp.com
+- Index data missing headers - check index_daily.txt from s3
+- ESG data is missing headers - check esg_metrics.txt from s3
+
+Missing ESG metrics in the report
+The ESG metrics is expected to contain 'volatile_index_id' and 'security_id' fields which are used to perform the join onto the index_daily data. If these field is not present, or
+there is an issue with the column, then the ESG metrics in the report file will be empty. In such case, the esg_metrics.txt file needs to be investigated and if it is not as expected,
+contact with the esg team must be made via esg@volatilecorp.com
+
+Elevation Process
+1. The application is deployed to the us-east-1 primary region and the eu-west-2 secondary region.
+2. Avoid elevation before 1pm when the business typically uses the report
+
+Developer Requirements
+The application uses Python 3.9 deployed on AWS Lambda
